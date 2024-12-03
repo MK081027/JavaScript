@@ -1,0 +1,28 @@
+<html>
+<body>
+<div style="color:red; font-size:50px;">
+<script language="JavaScript">
+    var liczba1 = prompt("Podaj dzien1:", "");
+    var liczba2 = prompt("Podaj dzien2:", "");
+    var ile_sekund_kar;
+
+    // Konwersja danych wejściowych na liczby
+    var D1_kar = parseFloat(liczba1);
+    var D2_kar = parseFloat(liczba2);
+
+    // Sprawdzenie, czy dane wejściowe są poprawne
+    if (!isNaN(D1_kar) && !isNaN(D2_kar)) {
+        // Obliczanie liczby sekund
+        ile_sekund_kar = (D1_kar - D2_kar) * 24 * 3600;
+
+        // Wyświetlanie wyników
+        document.write("dzien1 = " + D1_kar + "<br>");
+        document.write("dzien2 = " + D2_kar + "<br>");
+        document.write("ile_sekund_kar = " + ile_sekund_kar + " sek<br>");
+    } else {
+        document.write("Podano nieprawidłowe dane! Użyj liczb.<br>");
+    }
+</script>
+</div>
+</body>
+</html>
