@@ -1,0 +1,49 @@
+<html> 
+<head> 
+<title>
+ Przykład obliczenia P i O protstokąta
+</title>
+ <script language="JavaScript">
+function P(a,b)
+{
+ a_liczba=parseFloat(a)
+ b_liczba=parseFloat(b)
+ P_wynik=a_liczba*b_liczba
+ document.getElementsByName('pole')[0].value=P_wynik.toFixed(2); /* na dokument */
+ alert("P="+P_wynik.toFixed(2)+" cm^2"); /*do okna Alert */
+ pokaz1.innerHTML="P="+P_wynik.toFixed(2)+" cm^2"+"<br>"; /* do tabeli */
+}
+function O(a,b)
+{
+ a_liczba=parseFloat(a)
+ b_liczba=parseFloat(b)
+ O_wynik=2*a_liczba+2*b_liczba
+ document.getElementsByName('obwod')[0].value=O_wynik.toFixed(2);
+ alert("O="+O_wynik.toFixed(2)+" cm");
+ pokaz2.innerHTML="O="+O_wynik.toFixed(2)+"cm";
+}
+ </script>
+</head> 
+<body> 
+Obliczanie P i O prostokąta
+<br> <br>
+<form name="formularz" action="..." onsubmit="P(this.a.value,this.b.value); 
+O(this.a.value,this.b.value);return false"> 
+ Podaj a=
+ <input size="6" name="a">
+ Podaj b=
+ <input size="6" name="b">
+ <br> <br>
+ <input TYPE="submit" Value="oblicz" >
+ <br> <br>
+ P=
+ <input size="6" name="pole">
+ O=
+ <input size="6" name="obwod">
+</form>
+<table>
+ <tr id="pokaz1"></tr>
+ <tr id="pokaz2"></tr>
+</table>
+</body> 
+</html>
