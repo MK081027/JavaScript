@@ -1,0 +1,64 @@
+<textarea rows="22" cols="50">
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 20 - Trójkąt</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        .input-group { margin: 10px 0; }
+        .result { color: red; font-size: 24px; margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <h2>Obliczanie długości boków trójkąta</h2>
+    <div class="input-group">
+        Punkt A - x: <input type="text" id="xa_kar" value="0">
+        y: <input type="text" id="ya_kar" value="0">
+    </div>
+    <div class="input-group">
+        Punkt B - x: <input type="text" id="xb_kar" value="0">
+        y: <input type="text" id="yb_kar" value="0">
+    </div>
+    <div class="input-group">
+        Punkt C - x: <input type="text" id="xc_kar" value="0">
+        y: <input type="text" id="yc_kar" value="0">
+    </div>
+    <input type="button" value="Oblicz AB" onclick="AB_kar()">
+    <input type="button" value="Oblicz BC" onclick="BC_kar()">
+    <input type="button" value="Oblicz AC" onclick="AC_kar()">
+    <div id="wynik" class="result"></div>
+
+    <script>
+        function AB_kar() {
+            var xa_kar = parseFloat(document.getElementById('xa_kar').value);
+            var ya_kar = parseFloat(document.getElementById('ya_kar').value);
+            var xb_kar = parseFloat(document.getElementById('xb_kar').value);
+            var yb_kar = parseFloat(document.getElementById('yb_kar').value);
+            var dlugoscAB = Math.sqrt(Math.pow(xb_kar - xa_kar, 2) + Math.pow(yb_kar - ya_kar, 2));
+            document.getElementById('wynik').innerHTML = "Długość boku AB = " + dlugoscAB.toFixed(2);
+        }
+
+        function BC_kar() {
+            var xb_kar = parseFloat(document.getElementById('xb_kar').value);
+            var yb_kar = parseFloat(document.getElementById('yb_kar').value);
+            var xc_kar = parseFloat(document.getElementById('xc_kar').value);
+            var yc_kar = parseFloat(document.getElementById('yc_kar').value);
+            var dlugoscBC = Math.sqrt(Math.pow(xc_kar - xb_kar, 2) + Math.pow(yc_kar - yb_kar, 2));
+            document.getElementById('wynik').innerHTML = "Długość boku BC = " + dlugoscBC.toFixed(2);
+        }
+
+        function AC_kar() {
+            var xa_kar = parseFloat(document.getElementById('xa_kar').value);
+            var ya_kar = parseFloat(document.getElementById('ya_kar').value);
+            var xc_kar = parseFloat(document.getElementById('xc_kar').value);
+            var yc_kar = parseFloat(document.getElementById('yc_kar').value);
+            var dlugoscAC = Math.sqrt(Math.pow(xc_kar - xa_kar, 2) + Math.pow(yc_kar - ya_kar, 2));
+            document.getElementById('wynik').innerHTML = "Długość boku AC = " + dlugoscAC.toFixed(2);
+        }
+    </script>
+</body>
+</html>
+
+</textarea>
