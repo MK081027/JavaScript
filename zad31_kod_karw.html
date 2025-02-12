@@ -1,0 +1,33 @@
+<textarea rows="20" cols="50">
+<html>
+<head>
+<script type="text/javascript">
+var monitor = {
+marka: 'iiyama',
+hz: '144hz',
+rozdzielczosc: '1920x1080',
+pokaz: function ()
+{
+document.write(this.marka + ' ' + this.hz)
+}
+}
+monitor.pokaz();
+monitor.cena=1000;
+monitor.wypisz=function() {alert('cena: ' + this.cena + 'zł')}
+monitor.wypisz();
+</script>
+</head>
+<body>
+<br>
+Programowanie obiektowe. <br>
+Obiekt to monitor<br>
+Pola:<br>
+marka<br>
+hz<br>
+rozdzielczosc<br>
+metoda: pokaz<br>
+nowe pole to cena <br>
+nowa metoda to wypisz();<br>
+</body>
+</html>
+</textarea>
