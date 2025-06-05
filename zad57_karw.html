@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+</head>
+<body>
+  <h2 style="color:blue;">Pierwiastki 2. i 4. stopnia</h2>
+
+  <script>
+    var numer_kar = 10;
+    var licznik_kar = 0;
+
+    for (var i = numer_kar; i <= numer_kar + 15; i++) {
+      var pierw2_kar = Math.sqrt(i);
+      var pierw4_kar = Math.sqrt(pierw2_kar);
+
+      document.write("I=" + i + 
+        " pierw_2(" + i + ")=" + pierw2_kar.toFixed(2) + 
+        " pierw_4(" + i + ")=" + pierw4_kar.toFixed(2) + "<br>");
+
+      licznik_kar++;
+
+      if (licznik_kar == 3) {
+        alert("Kliknij OK, aby kontynuować");
+        licznik_kar = 0;
+      }
+    }
+  </script>
+</body>
+</html>
