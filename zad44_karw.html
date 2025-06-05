@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8" />
+    <title>Karwowski - Zadanie 44</title>
+</head>
+<body>
+    <h1>Zadanie 44</h1>
+    <button onclick="pokazTekst()">Uruchom skrypt</button>
+
+    <script>
+        function pokazTekst() {
+            const ilosc_powtorzen_kar = 11; // (9 % 4) + 10
+            const wielkosc_liter_kar = 40;  // (9 % 3) + 40
+            document.write("ilość wykonania pętli = " + ilosc_powtorzen_kar + "<br />");
+            document.write("wielkość liter = " + wielkosc_liter_kar + "px<br /><br />");
+
+            for (let i_kar = 1; i_kar <= ilosc_powtorzen_kar; i_kar++) {
+                if (i_kar % 2 === 1) {
+                    document.write(`<span style="font-size:${wielkosc_liter_kar}px;">Karwowski</span><br />`);
+                } else {
+                    document.write(`<span style="font-size:${wielkosc_liter_kar}px;">Mateusz</span><br />`);
+                }
+            }
+        }
+    </script>
+</body>
+</html>
