@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+</head>
+<body>
+  <h2 style="color:blue;">Sprawdzenie trójkąta</h2>
+  <script>
+    let a_kar, b_kar, c_kar;
+    let poprawne = false;
+
+    do {
+      a_kar = parseFloat(prompt("Podaj bok a:"));
+      b_kar = parseFloat(prompt("Podaj bok b:"));
+      c_kar = parseFloat(prompt("Podaj bok c:"));
+
+      poprawne =
+        a_kar > 0 && b_kar > 0 && c_kar > 0 &&
+        a_kar + b_kar > c_kar &&
+        a_kar + c_kar > b_kar &&
+        b_kar + c_kar > a_kar;
+
+      if (!poprawne) {
+        alert("To NIE jest trójkąt! Spróbuj ponownie.");
+      }
+    } while (!poprawne);
+
+    document.write("<h3 style='color:green;'>Boki " + a_kar + ", " + b_kar + ", " + c_kar + " tworzą trójkąt.</h3>");
+  </script>
+</body>
+</html>
